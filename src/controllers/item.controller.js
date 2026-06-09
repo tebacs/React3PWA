@@ -17,7 +17,7 @@ export const getItemById = async (req, res) => {
   try {
     const item = await itemService.getItemById(req.params.id);
     if (!item) {
-      return res.status(404).json({ error: "Item no encontrado" }); // HTTP 404
+      return res.status(404).json({ error: "Item no encontrado" });
     }
     res.status(200).json(item);
   } catch (error) {
@@ -28,10 +28,10 @@ export const getItemById = async (req, res) => {
 export const createItem = async (req, res) => {
   try {
     const errors = validateItem(req.body);
-    if (errors.length > 0) return res.status(400).json({ errors }); // HTTP 400
+    if (errors.length > 0) return res.status(400).json({ errors });
 
     const newItem = await itemService.createItem(req.body);
-    res.status(201).json(newItem); // HTTP 201
+    res.status(201).json(newItem);
   } catch (error) {
     res.status(500).json({ error: "Error al crear el item" });
   }
@@ -40,10 +40,10 @@ export const createItem = async (req, res) => {
 export const updateItem = async (req, res) => {
   try {
     const errors = validateItem(req.body);
-    if (errors.length > 0) return res.status(400).json({ errors }); // HTTP 400
+    if (errors.length > 0) return res.status(400).json({ errors });
 
     const updatedItem = await itemService.updateItem(req.params.id, req.body);
-    res.status(200).json(updatedItem); // HTTP 200
+    res.status(200).json(updatedItem);
   } catch (error) {
     res.status(500).json({
       error: "Error al actualizar el item (puede que el ID no exista)",
@@ -54,7 +54,7 @@ export const updateItem = async (req, res) => {
 export const deleteItem = async (req, res) => {
   try {
     await itemService.deleteItem(req.params.id);
-    res.status(200).json({ message: "Item eliminado correctamente" }); // HTTP 200
+    res.status(200).json({ message: "Item eliminado correctamente" });
   } catch (error) {
     res
       .status(500)
