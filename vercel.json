@@ -11,5 +11,12 @@
       "src": "/(.*)",
       "dest": "index.js"
     }
+  ],
+  "scripts": [
+    {
+      "dev": "node index.js", 
+      "vercel-build": "npx prisma generate",
+      "build": "npx prisma generate"
+    }
   ]
 }
