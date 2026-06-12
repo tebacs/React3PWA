@@ -18,7 +18,7 @@ export const getAllItems = async (page = 1, limit = 12, name, category) => {
     where,
     skip,
     take,
-    orderBy: { createdAt: "desc" },
+    orderBy: { id: "asc" },
   });
 };
 
