@@ -1,5 +1,6 @@
 import express from "express";
 import cors from "cors";
+import itemRoutes from "./routes/item.routes.js";
 
 const app = express();
 
@@ -13,3 +14,5 @@ app.listen(3000, () => {
 app.get("/api/health", (req, res) => {
   res.send({ status: "ok", message: "API funcionando correctamente" });
 });
+
+app.use("/api/items", itemRoutes);

@@ -4,7 +4,7 @@
   "description": "NEXUS",
   "main": "index.js",
   "scripts": {
-    "start": "node src/index.js",
+    "start": "npx tsx src/index.js",
     "dev": "nodemon --exec npx tsx src/index.js"
   },
   "prisma": {
