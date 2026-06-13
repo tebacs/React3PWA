@@ -1,4 +1,4 @@
-import { prisma } from "../../lib/prisma.ts";
+import { prisma } from "../../lib/prisma.js";
 
 export const getAllItems = async (page = 1, limit = 12, name, category) => {
   // Configuración de paginación
