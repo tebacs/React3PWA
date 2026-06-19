@@ -14,8 +14,8 @@ PWA desarrollada como proyecto principal para la materia **Programación Web Ava
 ## 🔗 Links
 
 * 🖥️ [Repositorio del Frontend](https://github.com/MGIC12/React2PWA)
-* 📋 [Tablero Kanban (GitHub Projects)](REEMPLAZAR_CON_LINK_DEL_TABLERO)
-* 🚀 [Deploy del Backend](REEMPLAZAR_CON_LINK_DEL_DEPLOY_BACKEND)
+* 📋 [Tablero Kanban (GitHub Projects)](https://github.com/users/tebacs/projects/3)
+* 🚀 [Deploy del Backend](https://react3-pwa.vercel.app/api/items)
 * 🌐 [Deploy del Frontend](https://pwa-react2-bacinstu.netlify.app)
 
 ---
