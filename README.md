@@ -6,7 +6,7 @@ PWA desarrollada como proyecto principal para la materia **Programación Web Ava
 
 | Nombre | Rol |
 | :--- | :--- |
-| Matías E. Bacsay | Developer |
+| Matías E. Bacsay | Project Manager |
 | Mariano Infante | Developer |
 
 ---
