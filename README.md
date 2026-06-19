@@ -54,7 +54,7 @@ La entidad principal del proyecto es `Item`, que representa una pieza del catál
 
 **1 — Clonar el repositorio**
 ```bash
-git clone https://github.com/Alejo4758/PWA_Backend.git
+git clone https://github.com/tebacs/React3PWA
 cd PWA_Backend
 ```
 
@@ -85,7 +85,7 @@ npx prisma db seed
 npm run dev
 ```
 
-El servidor quedará corriendo en `http://localhost:3000`.
+El servidor quedará corriendo en Local
 
 
 ## 🔐 Variables de entorno
@@ -94,8 +94,6 @@ Crear un archivo `.env` en la raíz del proyecto con las siguientes variables:
 
 ```env
 DATABASE_URL=        # Connection string de PostgreSQL (Neon u otro proveedor)
-PORT=3000            # Puerto en el que corre el servidor
-FRONTEND_URL=        # URL del frontend (para configurar CORS)
 ```
 
 > ⚠️ No subir el archivo `.env` al repositorio. Las credenciales se comparten por mensajería privada.
@@ -124,5 +122,4 @@ Para cargar los datos iniciales en la base de datos:
 npx prisma db seed
 ```
 
-Esto crea 32 registros de relojes de distintas marcas (Rolex, Omega, Longines, Cartier, Seiko, entre otras) con todos sus campos completos.
 
