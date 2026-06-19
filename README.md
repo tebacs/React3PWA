@@ -52,7 +52,77 @@ La entidad principal del proyecto es `Item`, que representa una pieza del catál
 
 ### Pasos
 
-#### 1 — Clonar el repositorio
+**1 — Clonar el repositorio**
 ```bash
-git clone [https://github.com/MGIC12/React2PWA.git](https://github.com/MGIC12/React2PWA.git)
-cd React2PWA
+git clone https://github.com/Alejo4758/PWA_Backend.git
+cd PWA_Backend
+```
+
+**2 — Instalar dependencias**
+```bash
+npm install
+```
+
+**3 — Configurar las variables de entorno**
+
+Copiar el archivo de ejemplo y completar los valores:
+```bash
+cp .env.example .env
+```
+
+**4 — Ejecutar las migraciones**
+```bash
+npx prisma migrate dev
+```
+
+**5 — Ejecutar el seed**
+```bash
+npx prisma db seed
+```
+
+**6 — Levantar el servidor**
+```bash
+npm run dev
+```
+
+El servidor quedará corriendo en `http://localhost:3000`.
+
+
+## 🔐 Variables de entorno
+
+Crear un archivo `.env` en la raíz del proyecto con las siguientes variables:
+
+```env
+DATABASE_URL=        # Connection string de PostgreSQL (Neon u otro proveedor)
+PORT=3000            # Puerto en el que corre el servidor
+FRONTEND_URL=        # URL del frontend (para configurar CORS)
+```
+
+> ⚠️ No subir el archivo `.env` al repositorio. Las credenciales se comparten por mensajería privada.
+
+
+## 🗄️ Migraciones
+
+Para crear y aplicar las migraciones de Prisma:
+
+```bash
+npx prisma migrate dev
+```
+
+Para regenerar el cliente de Prisma:
+
+```bash
+npx prisma generate
+```
+
+
+## 🌱 Seed
+
+Para cargar los datos iniciales en la base de datos:
+
+```bash
+npx prisma db seed
+```
+
+Esto crea 32 registros de relojes de distintas marcas (Rolex, Omega, Longines, Cartier, Seiko, entre otras) con todos sus campos completos.
+
