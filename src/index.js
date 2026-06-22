@@ -2,6 +2,7 @@ import express from "express";
 import cors from "cors";
 import itemRoutes from "./routes/item.routes.js";
 import authRoutes from "./routes/auth.routes.js";
+import favoriteRoutes from "./routes/favorites.routes.js";
 
 const app = express();
 app.use(cors());
@@ -14,6 +15,8 @@ app.use("/api/health", (req, res) =>
 app.use("/api/items", itemRoutes);
 
 app.use("/auth", authRoutes);
+
+app.use("/favorites", favoriteRoutes);
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
