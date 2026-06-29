@@ -16,4 +16,32 @@ model Item {
   technicalSpecs   String
   createdAt        DateTime @default(now())
   updatedAt        DateTime @updatedAt
+  
+  // Un ítem puede estar en los favoritos de muchos usuarios
+  favoritedBy      Favorite[] 
+}
+
+model User {
+  id        Int      @id @default(autoincrement())
+  name      String
+  email     String   @unique
+  password  String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  
+  // Un usuario puede tener muchos favoritos
+  favorites Favorite[] 
+}
+
+model Favorite {
+  id        Int      @id @default(autoincrement())
+  userId    Int
+  itemId    Int
+  createdAt DateTime @default(now())
+
+  // Relaciones con las tablas principales
+  user      User     @relation(fields: [userId], references: [id])
+  item      Item     @relation(fields: [itemId], references: [id])
+
+  @@unique([userId, itemId])
 }
